@@ -6,15 +6,26 @@
         <a href="index.html">Voltar</a>
         <p>Coloque seu nome e clique no botão</p>
         <div id="app">
-            <input type="text" name="nomes" id="nome"/>
+            <input type="text" name="nome" id="nome"/>
             <button onclick="alertClick()", onmouseover="alertHover()">click me</button>
         </div>
         <script>
+
+            /*var element = document.getElementById("nome");
+            //If it isn't "undefined" and it isn't "null", then it exists.
+            if(typeof(element) != 'undefined' && element != null){
+                alert('Element exists!');
+            } else{
+                alert('Element does not exist!');
+            }*/
+
+
+
             function alertClick(){
                 alert('Button was clicked');
             }
             function alertHover(){
-                var nomeT = document.getElementById("nome").innerHTML;
+                var nomeT = document.getElementById("nome").value;
                 alert( nomeT+ ', não se atreva a clicar nesse botão!');
             }
         </script>
