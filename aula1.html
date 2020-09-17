@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title> Curso JavaScript</title>
+    </head>
+    <body>
+        <a href="index.html">Voltar</a>
+        <p>Olhe o console (F12)</p>
+        <script>
+            // javascript
+
+            // Exercicio 1
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+            var resultado = 'O usuário mora em '+ endereco.cidade+'/'+endereco.uf+', no bairro '+endereco.bairro+', na '+endereco.rua+', nº'+endereco.numero+'.';
+            console.log(resultado);
+            
+
+            
+            // Exercício 2
+            function pares(x,y){
+                var par;
+                var todospares = "";
+                while (x<=y){
+                    par = x%2;
+                    if (par === 0){
+                        todospares = todospares + x + ', ';
+                    }
+                    x++;
+                }
+                todospares = todospares.slice(0,-2);
+                todospares += '.';
+                console.log(todospares);
+            }
+            pares(32,321);
+
+
+
+            // Exercício 3
+            function temHabilidade(skills) {
+                var retorno;
+                return (retorno = (skills[0]==='Javascript')? true : false);
+            }
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            console.log(temHabilidade(skills)); // true ou false
+
+
+
+            //Exercício 4
+            function experiencia(anos){
+                if (anos >=0 && anos<1){
+                    return 'Jovem gafanhoto';
+                } else if(anos >=1 && anos<3){
+                    return 'Anakin';
+                } else if(anos>=3 && anos <=6 ){
+                    return 'Darth';
+                }else if(anos>=7){
+                    return 'Luke';
+                }else{
+                    return 'JarJar Binks';
+                }
+            }
+            var anosEstudo = 0;
+            while (anosEstudo <9){
+                console.log(experiencia(anosEstudo));
+                anosEstudo +=2.5;
+            }
+            
+
+
+            //Exercicio 5
+            var i=0,j=0;
+            var resultado;
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+                ];
+
+            for (i=0;i<2;i++){
+                resultado = "O " + usuarios[i].nome + " possui as habilidades:";
+                for (j=0;j<3;j++){
+                    resultado += " " + usuarios[i].habilidades[j] + ",";
+                }
+                resultado = resultado.slice(0,-1);
+                resultado += ".";
+                console.log(resultado)
+            }
+        </script>
+    </body>
+</html>
