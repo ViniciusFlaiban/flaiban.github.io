@@ -5,6 +5,7 @@
     <body>
         <a href="index.html">Voltar</a>
         <div id="app">
+            <input id="nome" />
            
         </div>
         <script>
@@ -17,6 +18,9 @@
 
             var containerElement = document.querySelector('#app');
             containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector ('#nome');
+            containerElement.removeChild (inputElement);
             
         </script>
     </body>
