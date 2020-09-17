@@ -6,7 +6,7 @@
         <a href="index.html">Voltar</a>
         <p>Coloque seu nome e clique no botão</p>
         <div id="app">
-            <input type="text" name="nome"/>
+            <input type="text" name="nomes" id="nome"/>
             <button onclick="alertClick()", onmouseover="alertHover()">click me</button>
         </div>
         <script>
@@ -14,8 +14,8 @@
                 alert('Button was clicked');
             }
             function alertHover(){
-                var nomeT = document.getElementsById("nome").value;
-                alert( nomeT+ ', não se atreva a clicar nesse botão!');
+                var nome = document.getElementsById("nome").value;
+                alert( nome+ ', não se atreva a clicar nesse botão!');
             }
         </script>
     </body>
