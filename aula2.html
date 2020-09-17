@@ -14,7 +14,8 @@
                 alert('Button was clicked');
             }
             function alertHover(){
-                alert(document.getElementsByName("nome").values + ', não se atreva a clicar nesse botão!');
+                var nomeT = document.getElementsById("nome").value;
+                alert( nomeT+ ', não se atreva a clicar nesse botão!');
             }
         </script>
     </body>
