@@ -24,7 +24,7 @@
             // Exercício 2
             function pares(x,y){
                 var par;
-                var todospares = "";
+                var todospares = "Os números pares de 32 a 321 são: ";
                 while (x<=y){
                     par = x%2;
                     if (par === 0){
@@ -34,7 +34,7 @@
                 }
                 todospares = todospares.slice(0,-2);
                 todospares += '.';
-                console.log("Os números pares de 32 a 321 são: " + todospares);
+                console.log(todospares);
             }
             pares(32,321);
 
