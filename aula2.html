@@ -7,7 +7,7 @@
         <p>Coloque seu nome e clique no botão</p>
         <div id="app">
             <input type="text" name="nome" id="nome"/>
-            <button onclick="alertClick()", onmouseover="alertHover()">click me</button>
+            <button onclick="alertClick()", onmouseover="alertHover()", onkeypress="alertKeypress()">click me</button>
         </div>
         <script>
 
@@ -19,14 +19,20 @@
                 alert('Element does not exist!');
             }*/
 
-
-
             function alertClick(){
                 alert('eu não acredito que você clicou.... ATREVIDA(O)!');
             }
             function alertHover(){
                 var nomeT = document.getElementById("nome").value;
-                alert( nomeT+ ', NÃO SE ATREVA A CLICAR NESSE BOTÃO!');
+                if( nomeT === ""){
+                alert('é pra digitar o nome primeiro e depois clicar no botão... você leu?')
+                }else{
+                    alert( nomeT+ ', NÃO SE ATREVA A CLICAR NESSE BOTÃO!');
+                }
+                
+            }
+            function alertKeypress(){
+                alert( nomeT+ 'eu falei clicar, não é pra usar o mouse..... eu vou morrer...');
             }
         </script>
     </body>
