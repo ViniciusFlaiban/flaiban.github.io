@@ -19,25 +19,45 @@
                 alert('Element does not exist!');
             }*/
 
+            
+
             var txtbox = document.querySelector('input[name=nome]');
             txtbox.setAttribute('title','Ta olhando o que?');
-            var btnclick = document.querySelector('button.botao');
+            var botao = document.querySelector('button.botao');
 
-            btnclick.onclick = function(){
-                alert('eu não acredito que você clicou.... ATREVIDA(O)!');
+            function txtvazio()
+            {
+                alert('tem que colocar o nome primeiro e depois clicar no botão... você leu?');
             }
-            btnclick.addEventListener("mouseenter",function (){
-                var nomeT = document.getElementById("nome").value;
-                if( nomeT === ""){
-                alert('tem que colocar o nome primeiro e depois clicar no botão... você leu?')
+
+            botao.addEventListener("mouseenter",function (){
+                var nome = document.getElementById('nome').value;
+                if (nome==="")
+                {
+                    txtvazio();
                 }else{
-                    alert( nomeT+ ', NÃO SE ATREVA A CLICAR NESSE BOTÃO!');
+                    alert( nome + ', NÃO SE ATREVA A CLICAR NESSE BOTÃO!');
+                }
+                
+            });
+
+            botao.onclick = function(){
+                var nome = document.getElementById('nome').value;
+                if (nome === ""){
+                    txtvazio();
+                }else{
+                    alert('eu não acredito que você clicou.... ATREVIDA(O)!');
+                }
+            
+            botao.addEventListener("keypress",function(){
+                var nome = document.getElementById('nome').value;
+                if (nome === ""){
+                    txtvazio();
+                }else{
+                    alert( 'eu falei *clicar*, não é pra usar o teclado..... eu vou morrer...');
                 }
             });
-                
-            btnclick.addEventListener("keypress",function(){
-                alert( 'eu falei --clicar--, não é pra usar o teclado..... eu vou morrer...');
-            });
+        }
         </script>
     </body>
 </html>
